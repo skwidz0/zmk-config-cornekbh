@@ -3,11 +3,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define DEF 0
-#define NAV 1
-#define SYM 2
+#define WBASE 0
+#define NUM 1
+#define WNAV 2
 #define ADJ 3
-#define EXTRA 4
+#define MBASE 4
+#define MNAV 5
+#define GAME 6
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
@@ -80,8 +82,8 @@
     keymap {
         compatible = "zmk,keymap";
 
-        DEF {
-            display-name = "Base";
+        WBASE {
+            display-name = "WBase";
 
             // -----------------------------------------------------------------------------------------
             // |  =  |  Q  |  W  |  F  |  P   |    G     |===|  J  |   L    |  U  |  Y  |  ;  |  -  |
@@ -97,7 +99,7 @@
             >;
         };
 
-        NAV {
+        NUM {
             display-name = "Numbers";
 
             // -----------------------------------------------------------------------------------------
@@ -114,8 +116,8 @@
             >;
         };
 
-        SYM {
-            display-name = "Navigation";
+        WNAV {
+            display-name = "WNavigation";
 
             // -----------------------------------------------------------------------------------------
             // |     | SCRL< | SCRLv | SCRL^ | SCRL> |      |===|     | WORD<| WORDv| WORD^| WORD>|      |
@@ -147,13 +149,20 @@
                                          &trans          &studio_unlock      &trans            &trans       &bootloader    &trans
             >;
         };
-        EXTRA {
-            display-name = "Extra";
+        MBASE {
+            display-name = "MBase";
+
+            // -----------------------------------------------------------------------------------------
+            // |  =  |  Q  |  W  |  F  |  P   |    G     |===|  J  |   L    |  U  |  Y  |  ;  |  -  |
+            // | ESC |  A  |  R  |  S  |  T   |    D     |===|  H  |   N    |  E  |  I  |  O  |  '  |
+            // |  `  |  Z  |  X  |  C  |  V   |    B     |===|  N  |   M    |  ,  |  .  |  /  |  \  |
+            //                   | DEL | BKSP | LC(BKSP) |===| TAB | SPACE  | RET |
+
             bindings = <
-&trans  &trans       &trans         &trans          &trans      &msc SCRL_UP    &trans  &trans  &trans  &trans  &trans      &trans
-&trans  &trans       &trans        &mmv MOVE_UP      &trans   &msc SCRL_DOWN            &trans  &mkp LCLK  &mkp RCLK  &trans  &trans       &trans
-&trans  &trans       &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                     &trans        &trans      &trans            &trans  &trans  &trans
+&kp EQUAL  &kp Q  &kp W  &kp F     &kp P             &kp G                 &kp J    &kp L      &kp U          &kp Y    &kp SEMI  &kp MINUS
+&kp ESC    &kp A  &kp R  &kp S     &kp T             &kp D                 &kp H    &kp N      &kp E          &kp I    &kp O     &kp SQT
+&kp GRAVE  &kp Z  &kp X  &kp C     &kp V             &kp B                 &kp K    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
+                         &lt 1 DEL &mt LSHIFT BKSP   &mt LGUI LA(BKSP)    &kp TAB  &kp SPACE  &lt 2 RET
             >;
         };
     };
