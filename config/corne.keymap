@@ -149,6 +149,7 @@
                                          &trans          &studio_unlock      &trans            &trans       &bootloader    &trans
             >;
         };
+
         MBASE {
             display-name = "MBase";
 
@@ -163,6 +164,23 @@
 &kp ESC    &kp A  &kp R  &kp S     &kp T             &kp D                 &kp H    &kp N      &kp E          &kp I    &kp O     &kp SQT
 &kp GRAVE  &kp Z  &kp X  &kp C     &kp V             &kp B                 &kp K    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
                          &lt 1 DEL &mt LSHIFT BKSP   &mt LGUI LA(BKSP)    &kp TAB  &kp SPACE  &lt 2 RET
+            >;
+        };
+
+	MNAV {
+            display-name = "MNavigation";
+
+            // -----------------------------------------------------------------------------------------
+            // |     | SCRL< | SCRLv | SCRL^ | SCRL> |      |===|     | WORD<| WORDv| WORD^| WORD>|      |
+            // |     | MOVE< | MOVEv | MOVE^ | MOVE> |      |===|     |  <   |  v   |  ^   |  >   |      |
+            // |     |       |       |       |       |      |===|     | HOME | PGDN | PGUP | END  |      |
+            //                       | MCLK  | LCLK  | RCLK |===|     |      |      |
+
+            bindings = <
+&trans  &msc SCRL_LEFT    &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &trans      &trans    &kp LA(LEFT)  &kp LA(DOWN)    &kp LA(UP)      &kp LA(RIGHT)    &trans 
+&trans  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &trans      &trans    &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT        &trans 
+&trans  &trans            &trans          &kp LG(LKBT)    &kp LG(RBKT)      &trans      &trans    &kp HOME      &kp PG_DN       &kp PG_UP       &kp END          &trans
+                                          &lt 3 MCLK      &mkp LCLK         &mkp RCLK   &trans    &trans        &trans
             >;
         };
     };
