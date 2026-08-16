@@ -163,7 +163,7 @@
 &kp EQUAL  &kp Q  &kp W  &kp F       &kp P             &kp G                 &kp J    &kp L      &kp U          &kp Y    &kp SEMI  &kp MINUS
 &kp ESC    &kp A  &kp R  &kp S       &kp T             &kp D                 &kp H    &kp N      &kp E          &kp I    &kp O     &kp SQT
 &kp GRAVE  &kp Z  &kp X  &kp C       &kp V             &kp B                 &kp K    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
-                         &lt NUM DEL &mt LSHIFT BKSP   &mt LGUI LA(BKSP)     &kp TAB  &kp SPACE  &lt WNAV RET
+                         &lt NUM DEL &mt LSHIFT BKSP   &mt LGUI LA(BKSP)     &kp TAB  &kp SPACE  &lt MNAV RET
             >;
         };
 
@@ -177,9 +177,9 @@
             //                       | MCLK  | LCLK  | RCLK |===|     |      |      |
 
             bindings = <
-&trans  &msc SCRL_LEFT    &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &trans      &trans    &kp LC(LEFT)  &kp LC(DOWN)    &kp LC(UP)      &kp LC(RIGHT)    &trans 
+&trans  &msc SCRL_LEFT    &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &trans      &trans    &kp LA(LEFT)  &kp LA(DOWN)    &kp LA(UP)      &kp LA(RIGHT)    &trans 
 &trans  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &trans      &trans    &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT        &trans 
-&trans  &trans            &trans          &kp LA(LEFT)    &kp LA(RIGHT)     &trans      &trans    &kp HOME      &kp PG_DN       &kp PG_UP       &kp END          &trans
+&trans  &trans            &trans          &kp LG(LBKT)    &kp LG(RBKT)      &trans      &trans    &kp HOME      &kp PG_DN       &kp PG_UP       &kp END          &trans
                                           &lt ADJ MCLK    &mkp LCLK         &mkp RCLK   &trans    &trans        &trans
             >;
         };
