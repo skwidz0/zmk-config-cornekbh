@@ -91,7 +91,11 @@
     combos {
 	   compatible = "zmk,combos";
 
-	
+	   left_parenthesis {
+	   		bindings = <&kp LPAR>;
+			key-positions = <5 17>;
+			layers = <WBASE MBASE>;
+	   };
 	};
 
     };
