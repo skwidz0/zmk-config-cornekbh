@@ -4,10 +4,10 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define WBASE 0
-#define NUM 1
-#define WNAV 2
-#define ADJ 3
-#define MBASE 4
+#define MBASE 1
+#define NUM 2
+#define WNAV 3
+#define ADJ 4
 #define MNAV 5
 #define GAME 6
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
@@ -99,6 +99,23 @@
             >;
         };
 
+	MBASE {
+            display-name = "MBase";
+
+            // -----------------------------------------------------------------------------------------
+            // |  =  |  Q  |  W  |  F  |  P   |    G     |===|  J  |   L    |  U  |  Y  |  ;  |  -  |
+            // | ESC |  A  |  R  |  S  |  T   |    D     |===|  H  |   N    |  E  |  I  |  O  |  '  |
+            // |  `  |  Z  |  X  |  C  |  V   |    B     |===|  N  |   M    |  ,  |  .  |  /  |  \  |
+            //                   | DEL | BKSP | LC(BKSP) |===| TAB | SPACE  | RET |
+
+            bindings = <
+&kp EQUAL  &kp Q  &kp W  &kp F       &kp P             &kp G                 &kp J    &kp L      &kp U          &kp Y    &kp SEMI  &kp MINUS
+&kp ESC    &kp A  &kp R  &kp S       &kp T             &kp D                 &kp H    &kp N      &kp E          &kp I    &kp O     &kp SQT
+&kp GRAVE  &kp Z  &kp X  &kp C       &kp V             &kp B                 &kp K    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
+                         &lt NUM DEL &mt LSHIFT BKSP   &mt LGUI LA(BKSP)     &kp TAB  &kp SPACE  &lt MNAV RET
+            >;
+        };
+
         NUM {
             display-name = "Numbers";
 
@@ -147,23 +164,6 @@
 &trans  &kp LS(LA(TAB)) &kp LA(TAB)      &kp LS(LC(TAB)) &kp LC(TAB)         &trans            &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP &kp C_BRI_DN   &kp C_BRI_UP  &trans
 &trans  &kp LG(LEFT)    &kp LG(DOWN)     &kp LG(UP)      &kp LG(RIGHT)       &trans            &trans       &kp PSCRN      &kp C_PP     &trans         &trans        &trans
                                          &trans          &studio_unlock      &trans            &trans       &bootloader    &trans
-            >;
-        };
-
-        MBASE {
-            display-name = "MBase";
-
-            // -----------------------------------------------------------------------------------------
-            // |  =  |  Q  |  W  |  F  |  P   |    G     |===|  J  |   L    |  U  |  Y  |  ;  |  -  |
-            // | ESC |  A  |  R  |  S  |  T   |    D     |===|  H  |   N    |  E  |  I  |  O  |  '  |
-            // |  `  |  Z  |  X  |  C  |  V   |    B     |===|  N  |   M    |  ,  |  .  |  /  |  \  |
-            //                   | DEL | BKSP | LC(BKSP) |===| TAB | SPACE  | RET |
-
-            bindings = <
-&kp EQUAL  &kp Q  &kp W  &kp F       &kp P             &kp G                 &kp J    &kp L      &kp U          &kp Y    &kp SEMI  &kp MINUS
-&kp ESC    &kp A  &kp R  &kp S       &kp T             &kp D                 &kp H    &kp N      &kp E          &kp I    &kp O     &kp SQT
-&kp GRAVE  &kp Z  &kp X  &kp C       &kp V             &kp B                 &kp K    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
-                         &lt NUM DEL &mt LSHIFT BKSP   &mt LGUI LA(BKSP)     &kp TAB  &kp SPACE  &lt MNAV RET
             >;
         };
 
