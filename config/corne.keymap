@@ -183,6 +183,23 @@
                                           &lt ADJ MCLK    &mkp LCLK         &mkp RCLK   &trans    &trans        &trans
             >;
         };
+
+	GAME {
+            display-name = "Game";
+
+            // -----------------------------------------------------------------------------------------
+            // |  =  |  Q  |  W  |  F  |  P   |    G     |===|  J  |   L    |  U  |  Y  |  ;  |  -  |
+            // | ESC |  A  |  R  |  S  |  T   |    D     |===|  H  |   N    |  E  |  I  |  O  |  '  |
+            // |  `  |  Z  |  X  |  C  |  V   |    B     |===|  N  |   M    |  ,  |  .  |  /  |  \  |
+            //                   | DEL | BKSP | LC(BKSP) |===| TAB | SPACE  | RET |
+
+            bindings = <
+&kp EQUAL  &kp Q  &kp W  &kp F       &kp P             &kp G                 &kp J    &kp L      &kp U          &kp Y    &kp SEMI  &kp MINUS
+&kp ESC    &kp A  &kp R  &kp S       &kp T             &kp D                 &kp H    &kp N      &kp E          &kp I    &kp O     &kp SQT
+&kp GRAVE  &kp Z  &kp X  &kp C       &kp V             &kp B                 &kp K    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
+                         &lt NUM DEL &mt LSHIFT BKSP   &mt LGUI LA(BKSP)     &kp TAB  &kp SPACE  &lt MNAV RET
+            >;
+        };
     };
 
 };
