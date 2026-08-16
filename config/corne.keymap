@@ -112,9 +112,9 @@
             //                   | DEL | BKSP | LC(BKSP) |===| TAB | SPACE  | RET |
 
             bindings = <
-&ex_esc    &kp Q  &kp W  &kp F       &kp P             &kp G                 &kp J         &kp L      &kp U          &kp Y    &kp SEMI  &min_prt_w
-&kp EQUAL  &kp A  &kp R  &kp S       &kp T             &kp D                 &kp H         &kp N      &kp E          &kp I    &kp O     &kp SQT
-&kp GRAVE  &kp Z  &kp X  &kp C       &kp V             &kp B                 &kp K         &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
+&ex_esc         &kp Q  &kp W  &kp F       &kp P             &kp G                 &kp J         &kp L      &kp U          &kp Y    &kp SEMI  &min_prt_w
+&mt LGUI EQUAL  &kp A  &kp R  &kp S       &kp T             &kp D                 &kp H         &kp N      &kp E          &kp I    &kp O     &kp SQT
+&mt LALT GRAVE  &kp Z  &kp X  &kp C       &kp V             &kp B                 &kp K         &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
                          &lt NUM DEL &mt LSHIFT BKSP   &mt LCTRL LC(BKSP)    &mt LALT TAB  &kp SPACE  &lt WNAV RET
             >;
         };
@@ -129,9 +129,9 @@
             //                   | DEL | BKSP | LC(BKSP) |===| TAB | SPACE  | RET |
 
             bindings = <
-&ex_esc    &kp Q  &kp W  &kp F       &kp P             &kp G                 &kp J         &kp L      &kp U          &kp Y    &kp SEMI  &min_prt_m
-&kp EQUAL  &kp A  &kp R  &kp S       &kp T             &kp D                 &kp H         &kp N      &kp E          &kp I    &kp O     &kp SQT
-&kp GRAVE  &kp Z  &kp X  &kp C       &kp V             &kp B                 &kp K         &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
+&ex_esc          &kp Q  &kp W  &kp F       &kp P             &kp G                 &kp J         &kp L      &kp U          &kp Y    &kp SEMI  &min_prt_m
+&mt LCTRL EQUAL  &kp A  &kp R  &kp S       &kp T             &kp D                 &kp H         &kp N      &kp E          &kp I    &kp O     &kp SQT
+&mt LALT GRAVE   &kp Z  &kp X  &kp C       &kp V             &kp B                 &kp K         &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
                          &lt NUM DEL &mt LSHIFT BKSP   &mt LGUI LA(BKSP)     &mt LALT TAB  &kp SPACE  &lt MNAV RET
             >;
         };
