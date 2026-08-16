@@ -4,12 +4,12 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define WBASE 0
-#define MBASE 1
-#define GAME 2
-#define NUM 3
-#define WNAV 4
+#define NUM 1
+#define WNAV 2
+#define ADJ 3
+#define MBASE 4
 #define MNAV 5
-#define ADJ 6
+#define GAME 6
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
@@ -92,44 +92,10 @@
             //                   | DEL | BKSP | LC(BKSP) |===| TAB | SPACE  | RET |
 
             bindings = <
-&kp EQUAL  &kp Q  &kp W  &kp F       &kp P             &kp G                 &kp J    &kp L      &kp U          &kp Y    &kp SEMI  &kp MINUS
-&kp ESC    &kp A  &kp R  &kp S       &kp T             &kp D                 &kp H    &kp N      &kp E          &kp I    &kp O     &kp SQT
-&kp GRAVE  &kp Z  &kp X  &kp C       &kp V             &kp B                 &kp K    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
-                         &lt NUM DEL &mt LSHIFT BKSP   &mt LCTRL LC(BKSP)    &kp TAB  &kp SPACE  &lt WNAV RET
-            >;
-        };
-
-	MBASE {
-            display-name = "MBase";
-
-            // -----------------------------------------------------------------------------------------
-            // |  =  |  Q  |  W  |  F  |  P   |    G     |===|  J  |   L    |  U  |  Y  |  ;  |  -  |
-            // | ESC |  A  |  R  |  S  |  T   |    D     |===|  H  |   N    |  E  |  I  |  O  |  '  |
-            // |  `  |  Z  |  X  |  C  |  V   |    B     |===|  N  |   M    |  ,  |  .  |  /  |  \  |
-            //                   | DEL | BKSP | LC(BKSP) |===| TAB | SPACE  | RET |
-
-            bindings = <
-&kp EQUAL  &kp Q  &kp W  &kp F       &kp P             &kp G                 &kp J    &kp L      &kp U          &kp Y    &kp SEMI  &kp MINUS
-&kp ESC    &kp A  &kp R  &kp S       &kp T             &kp D                 &kp H    &kp N      &kp E          &kp I    &kp O     &kp SQT
-&kp GRAVE  &kp Z  &kp X  &kp C       &kp V             &kp B                 &kp K    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
-                         &lt NUM DEL &mt LSHIFT BKSP   &mt LGUI LA(BKSP)     &kp TAB  &kp SPACE  &lt MNAV RET
-            >;
-        };
-
-	GAME {
-            display-name = "Game";
-
-            // -----------------------------------------------------------------------------------------
-            // |     | SCRL< | SCRLv | SCRL^ | SCRL> |      |===|     | WORD<| WORDv| WORD^| WORD>|      |
-            // |     | MOVE< | MOVEv | MOVE^ | MOVE> |      |===|     |  <   |  v   |  ^   |  >   |      |
-            // |     |       |       |       |       |      |===|     | HOME | PGDN | PGUP | END  |      |
-            //                       | MCLK  | LCLK  | RCLK |===|     |      |      |
-
-            bindings = <
-&trans  &msc SCRL_LEFT    &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &trans      &trans    &kp LA(LEFT)  &kp LA(DOWN)    &kp LA(UP)      &kp LA(RIGHT)    &trans 
-&trans  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &trans      &trans    &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT        &trans 
-&trans  &trans            &trans          &kp LG(LKBT)    &kp LG(RBKT)      &trans      &trans    &kp HOME      &kp PG_DN       &kp PG_UP       &kp END          &trans
-                                          &lt ADJ MCLK    &mkp LCLK         &mkp RCLK   &trans    &trans        &trans
+&kp EQUAL  &kp Q  &kp W  &kp F     &kp P             &kp G                 &kp J    &kp L      &kp U          &kp Y    &kp SEMI  &kp MINUS
+&kp ESC    &kp A  &kp R  &kp S     &kp T             &kp D                 &kp H    &kp N      &kp E          &kp I    &kp O     &kp SQT
+&kp GRAVE  &kp Z  &kp X  &kp C     &kp V             &kp B                 &kp K    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
+                         &lt 1 DEL &mt LSHIFT BKSP   &mt LCTRL LC(BKSP)    &kp TAB  &kp SPACE  &lt 2 RET
             >;
         };
 
@@ -146,7 +112,7 @@
 &kp PLUS   &kp EXCL  &kp AT    &kp HASH     &kp DLLR         &kp PRCNT        &kp CARET &kp AMPS  &kp STAR  &kp LPAR     &kp RPAR         &kp UNDER
 &kp EQUAL  &kp N1    &kp N2    &kp N3       &kp N4           &kp N5           &kp N6    &kp N7    &kp N8    &kp N9       &kp N0           &kp MINUS
 &trans     &trans    &kp LPAR  &kp LBRC     &kp LBKT         &trans           &trans    &kp RBKT  &kp RBRC  &kp RPAR     &trans           &trans
-                               &trans       &trans           &trans           &kp DOT   &kp SPACE &lt ADJ COMMA 
+                               &trans       &trans           &trans           &kp DOT   &kp SPACE &lt 3 COMMA 
             >;
         };
 
@@ -163,24 +129,7 @@
 &trans  &msc SCRL_LEFT    &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &trans      &trans    &kp LC(LEFT)  &kp LC(DOWN)    &kp LC(UP)      &kp LC(RIGHT)    &trans 
 &trans  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &trans      &trans    &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT        &trans 
 &trans  &trans            &trans          &kp LA(LEFT)    &kp LA(RIGHT)     &trans      &trans    &kp HOME      &kp PG_DN       &kp PG_UP       &kp END          &trans
-                                          &lt ADJ MCLK    &mkp LCLK         &mkp RCLK   &trans    &trans        &trans
-            >;
-        };
-
-	MNAV {
-            display-name = "MNavigation";
-
-            // -----------------------------------------------------------------------------------------
-            // |     | SCRL< | SCRLv | SCRL^ | SCRL> |      |===|     | WORD<| WORDv| WORD^| WORD>|      |
-            // |     | MOVE< | MOVEv | MOVE^ | MOVE> |      |===|     |  <   |  v   |  ^   |  >   |      |
-            // |     |       |       |       |       |      |===|     | HOME | PGDN | PGUP | END  |      |
-            //                       | MCLK  | LCLK  | RCLK |===|     |      |      |
-
-            bindings = <
-&trans  &msc SCRL_LEFT    &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &trans      &trans    &kp LA(LEFT)  &kp LA(DOWN)    &kp LA(UP)      &kp LA(RIGHT)    &trans 
-&trans  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &trans      &trans    &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT        &trans 
-&trans  &trans            &trans          &kp LG(LKBT)    &kp LG(RBKT)      &trans      &trans    &kp HOME      &kp PG_DN       &kp PG_UP       &kp END          &trans
-                                          &lt ADJ MCLK    &mkp LCLK         &mkp RCLK   &trans    &trans        &trans
+                                          &lt 3 MCLK      &mkp LCLK         &mkp RCLK   &trans    &trans        &trans
             >;
         };
 
@@ -201,6 +150,22 @@
             >;
         };
 
+        MBASE {
+            display-name = "MBase";
+
+            // -----------------------------------------------------------------------------------------
+            // |  =  |  Q  |  W  |  F  |  P   |    G     |===|  J  |   L    |  U  |  Y  |  ;  |  -  |
+            // | ESC |  A  |  R  |  S  |  T   |    D     |===|  H  |   N    |  E  |  I  |  O  |  '  |
+            // |  `  |  Z  |  X  |  C  |  V   |    B     |===|  N  |   M    |  ,  |  .  |  /  |  \  |
+            //                   | DEL | BKSP | LC(BKSP) |===| TAB | SPACE  | RET |
+
+            bindings = <
+&kp EQUAL  &kp Q  &kp W  &kp F     &kp P             &kp G                 &kp J    &kp L      &kp U          &kp Y    &kp SEMI  &kp MINUS
+&kp ESC    &kp A  &kp R  &kp S     &kp T             &kp D                 &kp H    &kp N      &kp E          &kp I    &kp O     &kp SQT
+&kp GRAVE  &kp Z  &kp X  &kp C     &kp V             &kp B                 &kp K    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
+                         &lt 1 DEL &mt LSHIFT BKSP   &mt LGUI LA(BKSP)    &kp TAB  &kp SPACE  &lt 2 RET
+            >;
+        };
     };
 
 };
