@@ -120,16 +120,16 @@
             display-name = "Game";
 
             // -----------------------------------------------------------------------------------------
-            // |  =  |  Q  |  W  |  F  |  P   |    G     |===|  J  |   L    |  U  |  Y  |  ;  |  -  |
-            // | ESC |  A  |  R  |  S  |  T   |    D     |===|  H  |   N    |  E  |  I  |  O  |  '  |
+            // | TAB |  Q  |  W  |  E  |  R   |    T     |===|  Y  |   U    |  I  |  O  |  P  |  -  |
+            // | ESC |  A  |  S  |  D  |  F   |    G     |===|  H  |   J    |  K  |  L  |  ;  |  '  |
             // |  `  |  Z  |  X  |  C  |  V   |    B     |===|  N  |   M    |  ,  |  .  |  /  |  \  |
-            //                   | DEL | BKSP | LC(BKSP) |===| TAB | SPACE  | RET |
+            //                   | DEL | SPACE|    BKSP  |===| TAB | SPACE  | RET |
 
             bindings = <
-&kp EQUAL  &kp Q  &kp W  &kp F       &kp P             &kp G                 &kp J    &kp L      &kp U          &kp Y    &kp SEMI  &kp MINUS
-&kp ESC    &kp A  &kp R  &kp S       &kp T             &kp D                 &kp H    &kp N      &kp E          &kp I    &kp O     &kp SQT
-&kp GRAVE  &kp Z  &kp X  &kp C       &kp V             &kp B                 &kp K    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
-                         &lt NUM DEL &mt LSHIFT BKSP   &mt LGUI LA(BKSP)     &kp TAB  &kp SPACE  &lt MNAV RET
+&kp TAB    &kp Q  &kp W  &kp E       &kp R       &kp T     &kp Y    &kp U      &kp I          &kp O    &kp P     &kp MINUS
+&kp ESC    &kp A  &kp S  &kp D       &kp F       &kp G     &kp H    &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
+&kp GRAVE  &kp Z  &kp X  &kp C       &kp V       &kp B     &kp N    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
+                         &lt NUM DEL &kp SPACE   &kp BKSP  &kp TAB  &kp SPACE  &lt MNAV RET
             >;
         };
 
@@ -156,7 +156,7 @@
             // -----------------------------------------------------------------------------------------
             // |     | SCRL< | SCRLv | SCRL^ | SCRL> |      |===|     | WORD<| WORDv| WORD^| WORD>|      |
             // |     | MOVE< | MOVEv | MOVE^ | MOVE> |      |===|     |  <   |  v   |  ^   |  >   |      |
-            // |     |       |       |       |       |      |===|     | HOME | PGDN | PGUP | END  |      |
+            // |     |       |       | PGBK  | PGFWD |      |===|     | HOME | PGDN | PGUP | END  |      |
             //                       | MCLK  | LCLK  | RCLK |===|     |      |      |
 
             bindings = <
@@ -173,7 +173,7 @@
             // -----------------------------------------------------------------------------------------
             // |     | SCRL< | SCRLv | SCRL^ | SCRL> |      |===|     | WORD<| WORDv| WORD^| WORD>|      |
             // |     | MOVE< | MOVEv | MOVE^ | MOVE> |      |===|     |  <   |  v   |  ^   |  >   |      |
-            // |     |       |       |       |       |      |===|     | HOME | PGDN | PGUP | END  |      |
+            // |     |       |       | PGBK  | PGFWD |      |===|     | HOME | PGDN | PGUP | END  |      |
             //                       | MCLK  | LCLK  | RCLK |===|     |      |      |
 
             bindings = <
