@@ -88,14 +88,33 @@
                 <&kp LCTRL>;
         };
 
-    combos {
-	   compatible = "zmk,combos";
+	combos {
+		compatible = "zmk,combos";
 
-	   left_parenthesis {
+		left_parenthesis {
 	   		bindings = <&kp LPAR>;
 			key-positions = <5 17>;
 			layers = <WBASE MBASE>;
-	   };
+		};
+
+		right_parenthesis {
+	   		bindings = <&kp RPAR>;
+			key-positions = <6 18>;
+			layers = <WBASE MBASE>;
+		};
+
+		left_bracket {
+	   		bindings = <&kp LBKT>;
+			key-positions = <17 29>;
+			layers = <WBASE MBASE>;
+		};
+
+		right_bracket {
+	   		bindings = <&kp RBKT>;
+			key-positions = <18 30>;
+			layers = <WBASE MBASE>;
+		};
+
 	};
 
     };
@@ -119,7 +138,7 @@
 &ex_esc         &kp Q  &kp W  &kp F       &kp P             &kp G                 &kp J         &kp L      &kp U          &kp Y    &kp SEMI  &min_prt_w
 &mt LGUI EQUAL  &kp A  &kp R  &kp S       &kp T             &kp D                 &kp H         &kp N      &kp E          &kp I    &kp O     &kp SQT
 &mt LALT GRAVE  &kp Z  &kp X  &kp C       &kp V             &kp B                 &kp K         &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
-                         &lt NUM DEL &mt LSHIFT BKSP   &mt LCTRL LC(BKSP)    &mt LALT TAB  &kp SPACE  &lt WNAV RET
+                              &lt NUM DEL &mt LSHIFT BKSP   &mt LCTRL LC(BKSP)    &mt LALT TAB  &kp SPACE  &lt WNAV RET
             >;
         };
 
@@ -136,7 +155,7 @@
 &ex_esc          &kp Q  &kp W  &kp F       &kp P             &kp G                 &kp J         &kp L      &kp U          &kp Y    &kp SEMI  &min_prt_m
 &mt LCTRL EQUAL  &kp A  &kp R  &kp S       &kp T             &kp D                 &kp H         &kp N      &kp E          &kp I    &kp O     &kp SQT
 &mt LALT GRAVE   &kp Z  &kp X  &kp C       &kp V             &kp B                 &kp K         &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
-                         &lt NUM DEL &mt LSHIFT BKSP   &mt LGUI LA(BKSP)     &mt LALT TAB  &kp SPACE  &lt MNAV RET
+                               &lt NUM DEL &mt LSHIFT BKSP   &mt LGUI LA(BKSP)     &mt LALT TAB  &kp SPACE  &lt MNAV RET
             >;
         };
 
@@ -153,7 +172,7 @@
 &kp TAB     &kp Q  &kp W  &kp E       &kp R       &kp T     &kp Y    &kp U      &kp I          &kp O    &kp P     &kp MINUS
 &kp ESC     &kp A  &kp S  &kp D       &kp F       &kp G     &kp H    &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
 &kp LSHIFT  &kp Z  &kp X  &kp C       &kp V       &kp B     &kp N    &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
-                         &kp DEL     &kp SPACE   &kp BKSP  &kp TAB  &kp SPACE  &lt ADJ RET
+                          &kp DEL     &kp SPACE   &kp BKSP  &kp TAB  &kp SPACE  &lt ADJ RET
             >;
         };
 
