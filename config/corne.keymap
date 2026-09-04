@@ -210,16 +210,16 @@
             display-name = "WNavigation";
 
             // -----------------------------------------------------------------------------------------
-            // |     | SCRL< | SCRLv | SCRL^ | SCRL> | TBFW |===|     | WORD<| WORDv| WORD^| WORD>|      |
-            // |     | MOVE< | MOVEv | MOVE^ | MOVE> | TBBK |===|     |  <   |  v   |  ^   |  >   |      |
-            // |     |       |       | PGBK  | PGFWD |      |===|     | HOME | PGDN | PGUP | END  |      |
+            // | ALT | SCRL< | SCRLv | SCRL^ | SCRL> | TBFW |===|CUT  | WORD<| WORDv| WORD^| WORD>| REDO |
+            // | SHFT| MOVE< | MOVEv | MOVE^ | MOVE> | TBBK |===|PASTE|  <   |  v   |  ^   |  >   | UNDO |
+            // | CTRL|       |       | PGBK  | PGFWD |      |===|COPY | HOME | PGDN | PGUP | END  |      |
             //                       | MCLK  | LCLK  | RCLK |===|     |      |      |
 
             bindings = <
-&trans  &msc SCRL_LEFT    &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &kp LC(TAB)      &trans    &kp LC(LEFT)  &kp LC(DOWN)    &kp LC(UP)      &kp LC(RIGHT)    &trans 
-&trans  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &kp LS(LC(TAB))  &trans    &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT        &trans 
-&trans  &trans            &trans          &kp LA(LEFT)    &kp LA(RIGHT)     &trans           &trans    &kp HOME      &kp PG_DN       &kp PG_UP       &kp END          &trans
-                                          &lt ADJ MCLK    &mkp LCLK         &mkp RCLK        &trans    &trans        &trans
+&sk LALT   &msc SCRL_LEFT    &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &kp LC(TAB)      &kp LC(X) &kp LC(LEFT)  &kp LC(DOWN)    &kp LC(UP)      &kp LC(RIGHT)    &kp LC(LS(U)) 
+&sk LSHIFT &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &kp LS(LC(TAB))  &kp LC(V) &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT        &kp LC(U) 
+&sk LCTRL  &trans            &trans          &kp LA(LEFT)    &kp LA(RIGHT)     &trans           &kp LC(C) &kp HOME      &kp PG_DN       &kp PG_UP       &kp END          &trans
+                                             &lt ADJ MCLK    &mkp LCLK         &mkp RCLK        &trans    &trans        &trans
             >;
         };
 
@@ -227,16 +227,16 @@
             display-name = "MNavigation";
 
             // -----------------------------------------------------------------------------------------
-            // |     | SCRL< | SCRLv | SCRL^ | SCRL> |      |===|     | WORD<| WORDv| WORD^| WORD>|      |
-            // |     | MOVE< | MOVEv | MOVE^ | MOVE> |      |===|     |  <   |  v   |  ^   |  >   |      |
-            // |     |       |       | PGBK  | PGFWD |      |===|     | HOME | PGDN | PGUP | END  |      |
+            // | ALT | SCRL< | SCRLv | SCRL^ | SCRL> | TBFW |===|CUT  | WORD<| WORDv| WORD^| WORD>| REDO |
+            // | SHFT| MOVE< | MOVEv | MOVE^ | MOVE> | TBBK |===|PASTE|  <   |  v   |  ^   |  >   | UNDO |
+            // | CTRL|       |       | PGBK  | PGFWD |      |===|COPY | HOME | PGDN | PGUP | END  |      |
             //                       | MCLK  | LCLK  | RCLK |===|     |      |      |
 
             bindings = <
-&trans  &msc SCRL_LEFT    &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &kp LC(TAB)           &trans    &kp LA(LEFT)  &kp LA(DOWN)    &kp LA(UP)      &kp LA(RIGHT)    &trans 
-&trans  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &kp LS(LC(TAB))       &trans    &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT        &trans 
-&trans  &trans            &trans          &kp LG(LBKT)    &kp LG(RBKT)      &trans                &trans    &kp LG(LEFT)  &kp PG_DN       &kp PG_UP       &kp LG(RIGHT)    &trans
-                                          &lt ADJ MCLK    &mkp LCLK         &mkp RCLK             &trans    &trans        &trans
+&sk LALT    &msc SCRL_LEFT    &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &kp LC(TAB)           &kp LG(X) &kp LA(LEFT)  &kp LA(DOWN)    &kp LA(UP)      &kp LA(RIGHT)    &kp LG(LS(U)) 
+&sk LSHIFT  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &kp LS(LC(TAB))       &kp LG(V) &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT        &kp LG(U) 
+&sk LGUI    &trans            &trans          &kp LG(LBKT)    &kp LG(RBKT)      &trans                &kp LG(C) &kp LG(LEFT)  &kp PG_DN       &kp PG_UP       &kp LG(RIGHT)    &trans
+                                              &lt ADJ MCLK    &mkp LCLK         &mkp RCLK             &trans    &trans        &trans
             >;
         };
 
