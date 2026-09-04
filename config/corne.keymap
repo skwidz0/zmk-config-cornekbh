@@ -72,6 +72,12 @@
 		 #binding-cells = <0>;
            bindings = <&kp MINUS>, <&kp LG(LS(N5))>;
 	   };
+
+	   bslh_caps_word: baskslash_caps_word {
+		 compatible = "zmk,behavior-tap-dance";
+		 #binding-cells = <0>;
+           bindings = <&kp BSLH>, <&caps_word>;
+	   };
 	
     };
 
@@ -150,7 +156,7 @@
             bindings = <
 &ex_esc         &kp Q  &kp W  &kp F       &kp P             &kp G                 &kp J         &kp L      &kp U          &kp Y    &kp SEMI  &min_prt_w
 &mt LGUI EQUAL  &kp A  &kp R  &kp S       &kp T             &kp D                 &kp H         &kp N      &kp E          &kp I    &kp O     &kp SQT
-&mt LALT GRAVE  &kp Z  &kp X  &kp C       &kp V             &kp B                 &kp K         &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
+&mt LALT GRAVE  &kp Z  &kp X  &kp C       &kp V             &kp B                 &kp K         &kp M      &kp COMMA      &kp DOT  &kp FSLH  &bslh_caps_word
                               &lt NUM DEL &mt LSHIFT BKSP   &mt LCTRL LC(BKSP)    &mt LALT TAB  &kp SPACE  &lt WNAV RET
             >;
         };
@@ -167,7 +173,7 @@
             bindings = <
 &ex_esc          &kp Q  &kp W  &kp F       &kp P             &kp G                 &kp J         &kp L      &kp U          &kp Y    &kp SEMI  &min_prt_m
 &mt LCTRL EQUAL  &kp A  &kp R  &kp S       &kp T             &kp D                 &kp H         &kp N      &kp E          &kp I    &kp O     &kp SQT
-&mt LALT GRAVE   &kp Z  &kp X  &kp C       &kp V             &kp B                 &kp K         &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
+&mt LALT GRAVE   &kp Z  &kp X  &kp C       &kp V             &kp B                 &kp K         &kp M      &kp COMMA      &kp DOT  &kp FSLH  &bslh_caps_word
                                &lt NUM DEL &mt LSHIFT BKSP   &mt LGUI LA(BKSP)     &mt LALT TAB  &kp SPACE  &lt MNAV RET
             >;
         };
@@ -217,8 +223,8 @@
 
             bindings = <
 &sk LALT   &msc SCRL_LEFT    &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &kp LC(TAB)      &kp LC(X) &kp LC(LEFT)  &kp LC(DOWN)    &kp LC(UP)      &kp LC(RIGHT)    &kp LC(LS(Z)) 
-&sk LSHIFT &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &kp LS(LC(TAB))  &kp LC(V) &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT        &kp LC(Z) 
-&sk LCTRL  &trans            &trans          &kp LA(LEFT)    &kp LA(RIGHT)     &trans           &kp LC(C) &kp HOME      &kp PG_DN       &kp PG_UP       &kp END          &trans
+&sk LSHIFT &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &kp LS(LC(TAB))  &kp LC(C) &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT        &kp LC(Z) 
+&sk LCTRL  &trans            &trans          &kp LA(LEFT)    &kp LA(RIGHT)     &trans           &kp LC(V) &kp HOME      &kp PG_DN       &kp PG_UP       &kp END          &trans
                                              &lt ADJ MCLK    &mkp LCLK         &mkp RCLK        &trans    &trans        &trans
             >;
         };
@@ -234,8 +240,8 @@
 
             bindings = <
 &sk LALT    &msc SCRL_LEFT    &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &kp LC(TAB)           &kp LG(X) &kp LA(LEFT)  &kp LA(DOWN)    &kp LA(UP)      &kp LA(RIGHT)    &kp LG(LS(Z)) 
-&sk LSHIFT  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &kp LS(LC(TAB))       &kp LG(V) &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT        &kp LG(Z) 
-&sk LGUI    &trans            &trans          &kp LG(LBKT)    &kp LG(RBKT)      &trans                &kp LG(C) &kp LG(LEFT)  &kp PG_DN       &kp PG_UP       &kp LG(RIGHT)    &trans
+&sk LSHIFT  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &kp LS(LC(TAB))       &kp LG(C) &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT        &kp LG(Z) 
+&sk LGUI    &trans            &trans          &kp LG(LBKT)    &kp LG(RBKT)      &trans                &kp LG(V) &kp LG(LEFT)  &kp PG_DN       &kp PG_UP       &kp LG(RIGHT)    &trans
                                               &lt ADJ MCLK    &mkp LCLK         &mkp RCLK             &trans    &trans        &trans
             >;
         };
