@@ -243,7 +243,7 @@
             bindings = <
 &sk LALT   &msc SCRL_LEFT    &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &kp LC(TAB)      &kp LC(X) &kp LC(LEFT)  &kp LC(DOWN)    &kp LC(UP)      &kp LC(RIGHT)    &kp LC(LS(Z)) 
 &sk LSHIFT &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &kp LS(LC(TAB))  &kp LC(C) &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT        &kp LC(Z) 
-&sk LCTRL  &trans            &trans          &kp LA(LEFT)    &kp LA(RIGHT)     &trans           &kp LC(V) &kp HOME      &kp PG_DN       &kp PG_UP       &kp END          &trans
+&sk LCTRL  &trans            &trans          &kp LA(LEFT)    &kp LA(RIGHT)     &trans           &kp LC(V) &kp HOME      &kp PG_DN       &kp PG_UP       &kp END          &kp PSCRN
                                              &lt ADJ MCLK    &mkp LCLK         &mkp RCLK        &trans    &trans        &trans
             >;
         };
@@ -260,7 +260,7 @@
             bindings = <
 &sk LALT    &msc SCRL_LEFT    &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT   &kp LC(TAB)           &kp LG(X) &kp LA(LEFT)  &kp LA(DOWN)    &kp LA(UP)      &kp LA(RIGHT)    &kp LG(LS(Z)) 
 &sk LSHIFT  &mmv MOVE_LEFT    &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT   &kp LS(LC(TAB))       &kp LG(C) &kp LEFT      &kp DOWN        &kp UP          &kp RIGHT        &kp LG(Z) 
-&sk LGUI    &trans            &trans          &kp LG(LBKT)    &kp LG(RBKT)      &trans                &kp LG(V) &kp LG(LEFT)  &kp PG_DN       &kp PG_UP       &kp LG(RIGHT)    &trans
+&sk LGUI    &trans            &trans          &kp LG(LBKT)    &kp LG(RBKT)      &trans                &kp LG(V) &kp LG(LEFT)  &kp PG_DN       &kp PG_UP       &kp LG(RIGHT)    &kp LG(LS(N5))
                                               &lt ADJ MCLK    &mkp LCLK         &mkp RCLK             &trans    &trans        &trans
             >;
         };
@@ -276,7 +276,7 @@
 
             bindings = <
 &kp F1  &kp F2          &kp F3           &kp F4          &kp F5              &kp F6            &kp F7       &kp F8         &kp F9       &kp F10        &kp F11       &kp F12
-&trans  &trans          &to GAME         &to MBASE       &to WBASE           &trans            &trans       &kp C_VOL_DN   &kp C_VOL_UP &kp C_BRI_DN   &kp C_BRI_UP  &trans
+&trans  &ESC            &to GAME         &to MBASE       &to WBASE           &trans            &trans       &kp C_VOL_DN   &kp C_VOL_UP &kp C_BRI_DN   &kp C_BRI_UP  &trans
 &trans  &trans          &trans           &trans          &trans              &trans            &trans       &kp C_MUTE     &kp C_PP     &trans         &trans        &trans
                                          &trans          &studio_unlock      &trans            &trans       &bootloader    &trans
             >;
